@@ -3,11 +3,11 @@ declare(strict_types=1);
 date_default_timezone_set('Asia/Kolkata');
 
 // Local XAMPP defaults. Override with environment variables on hosted systems.
-$host = getenv('DB_HOST') ?: '127.0.0.1';
-$dbname = getenv('DB_NAME') ?: 'food_ordering_system';
-$username = getenv('DB_USER') ?: 'root';
-$password = getenv('DB_PASS') ?: '';
-$port = getenv('DB_PORT') ?: '3306';
+$host = getenv('TIDB_HOST') ;
+$dbname = getenv('TIDB_DATABASE') ;
+$username = getenv('TIDB_USER') ;
+$password = getenv('TIDB_PASSWORD') ;
+$port = getenv('TIDB_PORT') ?: '4000';
 $dsn = getenv('DB_DSN') ?: "mysql:host={$host};port={$port};dbname={$dbname};charset=utf8mb4";
 $sslCaPath = getenv('DB_SSL_CA_PATH') ?: '';
 
