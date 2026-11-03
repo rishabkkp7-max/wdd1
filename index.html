@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Freshly made favourites, delivered with care."><title>Goodfolk Kitchen — Fresh food, good mood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header"><a class="brand" href="#home"><span class="brand-mark">g.</span><span>goodfolk<span class="brand-kitchen"> kitchen</span></span></a>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav class="main-nav" id="main-nav"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#categories">Categories</a><a href="#contact">Contact</a></nav>
+  <a class="cart-nav" href="#cart" aria-label="Go to cart">Bag <span class="cart-count" id="cart-count">0</span> <span aria-hidden="true">↗</span></a>
+</header>
+<main>
+  <section class="hero" id="home"><div class="hero-copy"><p class="eyebrow"><span></span> GOOD FOOD, GOOD MOOD</p><h1>Made with love.<br><em>Served with joy.</em></h1><p class="hero-intro">Your neighbourhood favourites, made fresh and brought right to your door.</p><a class="button button-dark" href="#menu">Explore the menu <span>↘</span></a><div class="hero-note"><span class="note-stars">★★★★★</span><span>Loved by food people<br><b>4.9 · 2,000+ happy meals</b></span></div></div>
+    <div class="hero-art"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=90" alt="Freshly baked pizza topped with vibrant ingredients"><div class="hero-sticker"><span>FRESH</span><b>Every<br>single day</b><span class="sticker-spark">✳</span></div><div class="hero-caption"><span>01 / 03</span><span>THE GOOD STUFF STARTS HERE</span></div></div>
+  </section>
+  <section class="ticker" aria-label="Restaurant values"><span>MADE FRESH DAILY</span><b>✳</b><span>REAL INGREDIENTS</span><b>✳</b><span>DELIVERED WITH CARE</span><b>✳</b><span>MADE FRESH DAILY</span></section>
+  <section class="menu-section section-wrap" id="menu"><div class="section-heading"><div><p class="eyebrow">A LITTLE SOMETHING FOR EVERYONE</p><h2>On the <em>menu</em></h2></div><p class="section-aside">Good things are made from scratch.<br>Pick your mood, we’ll handle the rest.</p></div>
+    <div id="categories" class="category-list" aria-label="Filter by food category"><button class="category-chip active" data-category="all">Everything</button></div>
+    <div class="menu-status" id="menu-status" aria-live="polite">Loading today’s menu…</div><div class="food-grid" id="food-grid"></div>
+  </section>
+  <section class="order-section" id="cart"><div class="section-wrap"><div class="section-heading order-heading"><div><p class="eyebrow">YOUR GOOD FOOD IS CLOSE</p><h2>Make it <em>yours</em></h2></div><p class="section-aside">A few details and we’ll get your favourites on their way.</p></div>
+    <div class="checkout-layout"><div class="cart-panel"><div class="panel-title"><h3>Your bag</h3><span id="cart-label">0 items</span></div><div id="cart-items" class="cart-items"><div class="empty-cart">Your bag is taking a little break.<br><a href="#menu">Find something delicious ↗</a></div></div><div class="totals" id="totals" hidden><div><span>Food subtotal</span><b id="subtotal">₹0.00</b></div><div><span>GST · 5%</span><b id="gst">₹0.00</b></div><div><span>Delivery</span><b>₹30.00</b></div><div class="grand-total"><span>Total to pay</span><b id="grand-total">₹0.00</b></div></div></div>
+      <form id="checkout-form" class="checkout-form" novalidate><h3>Delivery details</h3><p class="form-hint">We’ll only use these to get your meal to you.</p><div class="form-grid"><label class="field field-wide">Full name<input name="full_name" autocomplete="name" required maxlength="120" placeholder="Your name"><small></small></label><label class="field">Mobile number<input name="mobile" inputmode="tel" autocomplete="tel" required placeholder="10-digit number"><small></small></label><label class="field">Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"><small></small></label><label class="field field-wide">Delivery address<textarea name="address" autocomplete="street-address" rows="2" required placeholder="House, street, area"></textarea><small></small></label><label class="field">City<input name="city" autocomplete="address-level2" required placeholder="City"><small></small></label><label class="field">Pincode<input name="pincode" inputmode="numeric" autocomplete="postal-code" required maxlength="6" placeholder="6-digit pincode"><small></small></label><label class="field field-wide">A note for the kitchen <span class="optional">OPTIONAL</span><textarea name="special_instructions" rows="2" maxlength="1000" placeholder="Allergies, spice preference, anything else?"></textarea><small></small></label></div><div class="submit-row"><button class="button button-orange" id="place-order" type="submit">Place my order <span>↗</span></button><p>Secure checkout · Pay on delivery</p></div><div class="form-message" id="form-message" role="status"></div></form>
+    </div></div></section>
+  <section class="lookup-section section-wrap" id="order-lookup"><div><p class="eyebrow">ALREADY ORDERED?</p><h2>Find your <em>order</em></h2></div><form id="lookup-form" class="lookup-form"><label class="sr-only" for="lookup-number">Order number</label><input id="lookup-number" placeholder="e.g. ORD261103A1B2C3D4" required><button class="button button-dark">Look it up ↗</button></form><p id="lookup-message" class="lookup-message" role="status"></p><div id="invoice" class="invoice" hidden></div></section>
+</main>
+<footer id="contact" class="site-footer"><div class="footer-top"><a class="brand brand-light" href="#home"><span class="brand-mark">g.</span><span>goodfolk<span class="brand-kitchen"> kitchen</span></span></a><p>Good food brings us together.<br>Thanks for making us part of your day.</p><a class="footer-order" href="#menu">Find your favourite <span>↗</span></a></div><div class="footer-bottom"><span>© 2026 Goodfolk Kitchen</span><span>Made fresh, always.</span><a href="#order-lookup">Track an order ↗</a></div></footer>
+<script src="assets/js/script.js" defer></script>
+</body></html>
